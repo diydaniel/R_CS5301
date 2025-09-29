@@ -1,0 +1,45 @@
+---
+title: "Quiz4"
+author: "DanielSmith"
+date: "2025-09-28"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Load required packages
+library(ggplot2)
+```
+### Refer to the PowerPoint slides for Visualization using R under week 5. 
+
+### Your task is to write code to generate the plots in slides # 23, 24, and 49. 
+
+### Please submit the Code as well as the corresponding plots of the code.
+
+## #23
+
+
+
+```{r mpg, echo=TRUE}
+ggplot(data=mpg) + geom_point(aes(x=displ,y=hwy)) + facet_wrap(~class,nrow=3) +
+  geom_line(aes(x=displ,y=hwy))
+```
+
+## #24
+
+```{r  mpg-plot1, echo=TRUE}
+ggplot(data=mpg) + geom_point(aes(x=displ,y=hwy)) +
+  geom_line(aes(x=displ,y=hwy,color=class))
+```
+
+## #49
+
+```{r  diamonds, echo=TRUE}
+ggplot(data = diamonds) +
+  geom_boxplot(aes(x=cut, y=price)) +
+  facet_wrap(~color,nrow=2)
+```
+
+
+
+
+
